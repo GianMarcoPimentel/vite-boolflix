@@ -10,7 +10,7 @@ export default {
         }
     }
 }
-</script>
+</script> 
 
 <template>
     <div class="container">
