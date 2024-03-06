@@ -32,5 +32,14 @@ export default {
 </template>
 
 <style>
+    ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    
+    gap: 15px;
 
+    
+    padding: 25px;
+}
 </style>
