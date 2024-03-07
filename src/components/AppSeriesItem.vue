@@ -27,17 +27,17 @@ export default {
 </template>
 
 <style lang="scss">
-.card{
+/* .card{
     
     width: calc(100% / 3 - (15px / 3 * 2));
-    height: 400px;
+    
 
     text-align: center;
 
    
     border: 1px red solid;
 
-    padding: 10px;
+    
 
     .card-back{
         display: none;
@@ -55,5 +55,5 @@ export default {
     .card-front{
         display: none;
     }
-}
+} */
 </style>
