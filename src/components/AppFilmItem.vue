@@ -20,6 +20,7 @@ export default {
 </script>
 
 <template>
+    
     <li class="card">
             <div class="card-front">
                 <img :src= "'https://image.tmdb.org/t/p/w342'+movie.poster_path" alt="">

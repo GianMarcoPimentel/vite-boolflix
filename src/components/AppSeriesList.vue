@@ -22,6 +22,8 @@ export default {
 
 <template>
     <div class="container">
+        <h1>Series:</h1>
+        <hr>
         <ul>
             <AppSeriesItem 
             v-for=" currentSerie in store.series"

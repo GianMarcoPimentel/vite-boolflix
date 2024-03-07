@@ -21,7 +21,9 @@ export default {
 
 <template>
     <div class="container">
+        
         <ul>
+            
             <AppFilmItem
             v-for=" currentFilm in store.movies"
             :movie="currentFilm"

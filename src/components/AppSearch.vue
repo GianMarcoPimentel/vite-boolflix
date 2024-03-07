@@ -16,7 +16,7 @@ export default {
     <div class="container">
         <div class="search-bar">
             <input type="search" name="searchFilm"
-            v-model="store.searchFilm"
+            v-model="store.search"
             >
     
             <button @click="$emit('search')"> Cerca Film </button>

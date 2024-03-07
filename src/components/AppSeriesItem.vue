@@ -21,8 +21,8 @@ export default {
                 <span> {{ serie.vote_average }} </span>
             </div>
     
-    </li>
-    
+        </li>
+     
 </template>
 
 <style lang="scss">

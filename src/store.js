@@ -9,8 +9,8 @@ export const store = reactive({
 
    series : [],
 
-   searchFilms: "",
+   search: "",
 
-   searchSeries: "",
+  
 
 }); 
