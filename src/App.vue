@@ -41,7 +41,7 @@ export default {
   },
 
   searchTv() {
-    axios.get('https://api.themoviedb.org/3/search/tv?api_key=129c7c147dc0e52f5990dc27c7d71e42&query=scrubs').then(res => {
+    axios.get('https://api.themoviedb.org/3/search/tv?api_key=129c7c147dc0e52f5990dc27c7d71e42&query= ' + this.store.searchSeries).then(res => {
       console.dir(res.data.results);
       this.store.series = res.data.results;
     })

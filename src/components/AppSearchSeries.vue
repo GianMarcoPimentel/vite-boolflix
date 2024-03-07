@@ -16,10 +16,10 @@ export default {
     <div class="container">
         <div class="search-bar">
             <input type="search" name="searchFilm"
-            v-model="store.searchFilm"
+            v-model="store.searchSeries"
             >
     
-            <button @click="$emit('search')"> Cerca Film </button>
+            <button @click="$emit('search')"> Cerca SerieTv </button>
         </div>
     </div>
 </template>
