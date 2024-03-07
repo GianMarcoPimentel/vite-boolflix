@@ -23,7 +23,7 @@ export default {
 
   methods: {
     searchFilm(){
-    axios.get('https://api.themoviedb.org/3/search/movie?api_key=129c7c147dc0e52f5990dc27c7d71e42&query=' + this.store.searchFilm).then(res => {
+    axios.get('https://api.themoviedb.org/3/search/movie?api_key=129c7c147dc0e52f5990dc27c7d71e42&query= ' + this.store.searchFilm).then(res => {
       
       console.dir(res.data.results);
       this.store.movies = res.data.results
