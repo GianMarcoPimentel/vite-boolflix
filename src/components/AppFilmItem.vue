@@ -13,14 +13,6 @@ export default {
 
     data(){
         return {
-           /*  langs: ['ja', 
-                    'en', 
-                    'it',
-                    'es',
-                    
-                ] */
-        
-      
                 
         }
     }
@@ -30,7 +22,7 @@ export default {
 <template>
     <li class="card">
             <div class="card-front">
-                <img :src= "'https://image.tmdb.org/t/p/w342'+movie.poster_path"alt="">
+                <img :src= "'https://image.tmdb.org/t/p/w342'+movie.poster_path" alt="">
             </div>
             <div class="card-back">
                 <span> {{ movie.original_title }} </span> 
@@ -68,13 +60,16 @@ export default {
 .card:hover{
     .card-back{
         width: 100%;
+        height: 100%;
         display: inline-block;
         display: flex;
         flex-flow: column;
         align-items: center;
-        gap: 20px;
+        justify-content: space-around;
+       /*  gap: 10px; */
 
         text-align: center;
+        background-color: black;
     }
     .card-front{
         display: none;
