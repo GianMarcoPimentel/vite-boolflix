@@ -1,47 +1,32 @@
 <script>
-
-/* import { store } from '../store.js'; */
-
-
 export default {
-    name : 'AppFilmItem',
+    name:'AppSeriesItem',
 
-    props: {
-        movie: Object,
-
-    },
-
-    data(){
-        return {
-            langs: ['ja', 
-                    'en', 
-                    'it',
-                    'es',
-                    
-                ]
-        }
+    props:{
+        serie: Object,
     }
 }
 </script>
 
 <template>
-    <li class="card">
+    
+        <li class="card">
             <div class="card-front">
-                <img :src="movie.poster_path" alt="">
+                
             </div>
             <div class="card-back">
-                <span> {{ movie.original_title }} </span> <br>
-                <span> {{ movie.title }} </span> <br>
+                <span> {{ serie.original_name}} </span> <br>
+                <span> {{ serie.name }} </span> <br>
                 <img src="https://flagcdn.com/16x12/es.png" alt="">
-                <span > {{ movie.original_language }} </span> <br>
-                <span> {{ movie.vote_average }} </span>
+                <span > {{ serie.original_language }} </span> <br>
+                <span> {{ serie.vote_average }} </span>
             </div>
     
     </li>
+    
 </template>
 
 <style lang="scss">
-
 .card{
     
     width: calc(100% / 3 - (15px / 3 * 2));
@@ -71,5 +56,4 @@ export default {
         display: none;
     }
 }
-
 </style>

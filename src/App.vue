@@ -5,12 +5,16 @@ import { store } from './store.js';
 
 import AppSearch from './components/AppSearch.vue';
 
+import AppSearchSeries from './components/AppSearchSeries.vue';
+
 import AppFilmList from './components/AppFilmList.vue';
+
+import AppSeriesList from './components/AppSeriesList.vue';
 
 export default {
   data() {
     return {
-      movies:[],
+     
       store,
     }
   },
@@ -18,7 +22,9 @@ export default {
 
   components: {
     AppSearch,
+    AppSearchSeries,
     AppFilmList,
+    AppSeriesList,
   },
 
   methods: {
@@ -32,6 +38,13 @@ export default {
       console.log(err);
     })
     console.log('ok')
+  },
+
+  searchTv() {
+    axios.get('https://api.themoviedb.org/3/search/tv?api_key=129c7c147dc0e52f5990dc27c7d71e42&query=scrubs').then(res => {
+      console.dir(res.data.results);
+      this.store.series = res.data.results;
+    })
   }
   },
 }
@@ -40,6 +53,8 @@ export default {
 <template>
   <AppSearch @search="searchFilm()"></AppSearch>
   <AppFilmList></AppFilmList>
+  <AppSearchSeries @search="searchTv() "></AppSearchSeries>
+  <AppSeriesList></AppSeriesList>
 </template>
 
 <style>
