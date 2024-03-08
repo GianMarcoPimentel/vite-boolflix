@@ -13,17 +13,11 @@ export default {
 
     data(){
         return {
-                stelle:0,
-                lang: '',
+                stelle:[],
+                
                 }
     },
 
-    created() {
-        this.stelle = Math.floor(this.movie.vote_average);
-        
-        console.log(this.stelle)
-
-    },
 
     methods:{
        /*  star: function(){
@@ -58,7 +52,7 @@ export default {
                 @click="changeLanguage"
                 :src="'https://flagcdn.com/16x12/'+changeLanguage()+'.png'" alt="">         
                 </span>
-                <span> {{stelle }} </span>
+                <span> {{ stelle }} </span>
             </div>
     
     </li>
