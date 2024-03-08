@@ -13,31 +13,39 @@ export default {
 
     data(){
         return {
-                
-        }
+                stelle:0,
+                lang: '',
+                }
     },
+
+    created() {
+        this.stelle = Math.floor(this.movie.vote_average);
+        
+        console.log(this.stelle)
+
+    },
+
     methods:{
        /*  star: function(){
             Math.floor(movie.vote_average);
             console.log(movie.vote_average)
         }, */
         changeLanguage(){
-            
-            if(movie.original_language == 'en'){
-                return movie.original_language == 'gb';
-            } else if (movie.original_language == 'ja'){
-                return movie.original_language == 'jp';
+
+            if(this.movie.original_language == 'en'){
+                return  'gb';
+            } else if (this.movie.original_language == 'ja'){
+                return  'jp';
             } else{
-                return movie.original_language;
+                return this.movie.original_languag;
             }
-        }
+        },
 
     },
 }
 </script>
 
 <template>
-    
     <li class="card">
             <div class="card-front">
                 <img :src= "'https://image.tmdb.org/t/p/w342'+movie.poster_path" alt="">
@@ -47,10 +55,10 @@ export default {
                 <span> {{ movie.title  }} </span> 
                 <span>
                 <img 
-                v-on="changeLanguage"
-                :src="'https://flagcdn.com/16x12/'+movie.original_language+'.png'" alt="">         
+                @click="changeLanguage"
+                :src="'https://flagcdn.com/16x12/'+changeLanguage()+'.png'" alt="">         
                 </span>
-                <span> {{ movie.vote_average }} </span>
+                <span> {{stelle }} </span>
             </div>
     
     </li>
