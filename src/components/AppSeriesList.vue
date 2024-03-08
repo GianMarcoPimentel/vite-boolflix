@@ -22,8 +22,7 @@ export default {
 
 <template>
     <div class="container">
-        <h1>Series:</h1>
-        <hr>
+    
         <ul>
             <AppSeriesItem 
             v-for=" currentSerie in store.series"
@@ -41,9 +40,10 @@ export default {
     display: flex;
     flex-flow: row wrap;
     
-    gap: 15px;
+   
 
     
     padding: 25px;
 }
 </style>
+

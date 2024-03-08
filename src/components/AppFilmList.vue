@@ -27,6 +27,7 @@ export default {
             <AppFilmItem
             v-for=" currentFilm in store.movies"
             :movie="currentFilm"
+            
             >
             </AppFilmItem>
         </ul>
@@ -39,7 +40,7 @@ export default {
     display: flex;
     flex-flow: row wrap;
     
-    gap: 15px;
+    
 
     
     padding: 25px;

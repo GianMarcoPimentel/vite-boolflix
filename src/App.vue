@@ -57,7 +57,8 @@ export default {
 </script>
 
 <template>
-  <AppSearch @search="searchFilm()"></AppSearch>
+  <AppSearch @search="searchFilm()">
+    </AppSearch>
   <AppFilmList></AppFilmList>
   <!-- <AppSearchSeries @search="searchTv() "></AppSearchSeries> -->
   <AppSeriesList></AppSeriesList>

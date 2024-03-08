@@ -28,7 +28,7 @@ export default {
 <style lang="scss">
 .card{
     
-    width: calc(100% / 3 - (15px / 3 * 2));
+    width: calc(100% / 5);
     
 
     .card-back{

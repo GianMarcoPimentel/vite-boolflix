@@ -8,14 +8,31 @@ export default {
 
     props: {
         movie: Object,
-
+       /*  serie: Object, */
     },
 
     data(){
         return {
                 
         }
-    }
+    },
+    methods:{
+       /*  star: function(){
+            Math.floor(movie.vote_average);
+            console.log(movie.vote_average)
+        }, */
+        changeLanguage(){
+            
+            if(movie.original_language == 'en'){
+                return movie.original_language == 'gb';
+            } else if (movie.original_language == 'ja'){
+                return movie.original_language == 'jp';
+            } else{
+                return movie.original_language;
+            }
+        }
+
+    },
 }
 </script>
 
@@ -26,10 +43,12 @@ export default {
                 <img :src= "'https://image.tmdb.org/t/p/w342'+movie.poster_path" alt="">
             </div>
             <div class="card-back">
-                <span> {{ movie.original_title }} </span> 
-                <span> {{ movie.title }} </span> 
+                <span> {{ movie.original_title  }} </span> 
+                <span> {{ movie.title  }} </span> 
                 <span>
-                <img :src="'https://flagcdn.com/16x12/'+movie.original_language+'.png'" alt="">         
+                <img 
+                v-on="changeLanguage"
+                :src="'https://flagcdn.com/16x12/'+movie.original_language+'.png'" alt="">         
                 </span>
                 <span> {{ movie.vote_average }} </span>
             </div>
@@ -41,7 +60,7 @@ export default {
 
 .card{
     
-    width: calc(100% / 3 - (15px / 3 * 2));
+    width: calc(100% / 5);
     
 
     .card-back{
@@ -53,7 +72,7 @@ export default {
             width: 100%;
             max-width: 100%;
             height: 100%;
-            object-position: center;
+            
         }
     }
     
