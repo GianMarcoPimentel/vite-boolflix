@@ -9,7 +9,7 @@ import AppSearch from './components/AppSearch.vue';
 
 import AppFilmList from './components/AppFilmList.vue';
 
-import AppSeriesList from './components/AppSeriesList.vue';
+/* import AppSeriesList from './components/AppSeriesList.vue'; */
 
 export default {
   data() {
@@ -22,9 +22,9 @@ export default {
 
   components: {
     AppSearch,
-    /* AppSearchSeries, */
+   
     AppFilmList,
-    AppSeriesList,
+    
   },
 
   methods: {

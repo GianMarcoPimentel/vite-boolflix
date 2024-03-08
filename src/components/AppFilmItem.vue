@@ -8,7 +8,7 @@ export default {
 
     props: {
         movie: Object,
-       /*  serie: Object, */
+      
     },
 
     data(){
@@ -31,7 +31,7 @@ export default {
             } else if (this.movie.original_language == 'ja'){
                 return  'jp';
             } else{
-                return this.movie.original_languag;
+                return this.movie.original_language;
             }
         },
 
@@ -45,8 +45,8 @@ export default {
                 <img :src= "'https://image.tmdb.org/t/p/w342'+movie.poster_path" alt="">
             </div>
             <div class="card-back">
-                <span> {{ movie.original_title  }} </span> 
-                <span> {{ movie.title  }} </span> 
+                <span> {{ movie.original_title ? movie.original_title : movie.original_name }} </span> 
+                <span> {{ movie.title ? movie.title : movie.name  }} </span> 
                 <span>
                 <img 
                 @click="changeLanguage"
